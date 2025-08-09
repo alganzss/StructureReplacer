@@ -1,0 +1,28 @@
+name: StructureReplacer
+version: '1.0-SNAPSHOT'
+main: my.pikrew.structureReplacer.StructureReplacer
+api-version: '1.21'
+author: Pikrew
+description: Plugin untuk mengganti vanilla structure dengan custom structure
+
+commands:
+  structurereplacer:
+    description: Main command untuk StructureReplacer
+    usage: /structurereplacer <subcommand>
+    aliases: [sr]
+
+permissions:
+  structurereplacer.*:
+    description: Semua permission untuk StructureReplacer
+    default: op
+    children:
+      structurereplacer.use: true
+      structurereplacer.admin: true
+
+  structurereplacer.use:
+    description: Permission untuk menggunakan basic commands
+    default: op
+
+  structurereplacer.admin:
+    description: Permission untuk admin commands (reload, dll)
+    default: op
